@@ -9,17 +9,17 @@
 /* Begin PBXBuildFile section */
 		4AC271283E5933A93163D17B /* Pods_yak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F483C96B6E50F46106810E1F /* Pods_yak.framework */; };
 		AC3293662074407A00438DBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3293652074407A00438DBF /* AppDelegate.swift */; };
-		AC3293682074407A00438DBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3293672074407A00438DBF /* ViewController.swift */; };
 		AC32936B2074407A00438DBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC3293692074407A00438DBF /* Main.storyboard */; };
 		AC32936D2074407C00438DBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC32936C2074407C00438DBF /* Assets.xcassets */; };
 		AC3293702074407C00438DBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC32936E2074407C00438DBF /* LaunchScreen.storyboard */; };
 		AC32937B207444C800438DBF /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC32937A207444C800438DBF /* SWRevealViewController.m */; };
+		AC3293802074472B00438DBF /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC32937F2074472B00438DBF /* ChatController.swift */; };
+		AC3293822074474400438DBF /* ChannelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3293812074474400438DBF /* ChannelController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AC3293622074407A00438DBF /* yak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3293652074407A00438DBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC3293672074407A00438DBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC32936A2074407A00438DBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC32936C2074407C00438DBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC32936F2074407C00438DBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -27,6 +27,8 @@
 		AC329378207444C600438DBF /* yak-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "yak-Bridging-Header.h"; sourceTree = "<group>"; };
 		AC329379207444C700438DBF /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		AC32937A207444C800438DBF /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		AC32937F2074472B00438DBF /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
+		AC3293812074474400438DBF /* ChannelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelController.swift; sourceTree = "<group>"; };
 		C23AEACCF52F167C3BE3C977 /* Pods-yak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yak.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yak/Pods-yak.debug.xcconfig"; sourceTree = "<group>"; };
 		F483C96B6E50F46106810E1F /* Pods_yak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA141623E667A552EBF38188 /* Pods-yak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yak.release.xcconfig"; path = "Pods/Target Support Files/Pods-yak/Pods-yak.release.xcconfig"; sourceTree = "<group>"; };
@@ -47,7 +49,6 @@
 		AC3293592074407A00438DBF = {
 			isa = PBXGroup;
 			children = (
-				AC3293772074448400438DBF /* Supporting Files */,
 				AC3293642074407A00438DBF /* yak */,
 				AC3293632074407A00438DBF /* Products */,
 				BF5A6C4D0788568E5E2D010E /* Pods */,
@@ -66,8 +67,11 @@
 		AC3293642074407A00438DBF /* yak */ = {
 			isa = PBXGroup;
 			children = (
+				AC32937E2074470F00438DBF /* models */,
+				AC32937D2074470800438DBF /* views */,
+				AC32937C207446F500438DBF /* controllers */,
+				AC3293772074448400438DBF /* Supporting Files */,
 				AC3293652074407A00438DBF /* AppDelegate.swift */,
-				AC3293672074407A00438DBF /* ViewController.swift */,
 				AC3293692074407A00438DBF /* Main.storyboard */,
 				AC32936C2074407C00438DBF /* Assets.xcassets */,
 				AC32936E2074407C00438DBF /* LaunchScreen.storyboard */,
@@ -84,6 +88,29 @@
 				AC329378207444C600438DBF /* yak-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC32937C207446F500438DBF /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC32937F2074472B00438DBF /* ChatController.swift */,
+				AC3293812074474400438DBF /* ChannelController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		AC32937D2074470800438DBF /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		AC32937E2074470F00438DBF /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		B5F40759FA5CF671D8DD32B2 /* Frameworks */ = {
@@ -238,9 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC3293682074407A00438DBF /* ViewController.swift in Sources */,
 				AC3293662074407A00438DBF /* AppDelegate.swift in Sources */,
 				AC32937B207444C800438DBF /* SWRevealViewController.m in Sources */,
+				AC3293802074472B00438DBF /* ChatController.swift in Sources */,
+				AC3293822074474400438DBF /* ChannelController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +423,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.theflawlesshack.yak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/yak-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "yak/Supporting Files/yak-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -417,7 +445,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.theflawlesshack.yak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/yak-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "yak/Supporting Files/yak-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
