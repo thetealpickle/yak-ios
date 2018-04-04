@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4AC271283E5933A93163D17B /* Pods_yak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F483C96B6E50F46106810E1F /* Pods_yak.framework */; };
+		AC10FB06207466FB0035055B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10FB05207466FB0035055B /* LoginController.swift */; };
+		AC10FB082074762B0035055B /* CreateAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10FB072074762B0035055B /* CreateAccountController.swift */; };
 		AC3293662074407A00438DBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3293652074407A00438DBF /* AppDelegate.swift */; };
 		AC32936B2074407A00438DBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC3293692074407A00438DBF /* Main.storyboard */; };
 		AC32936D2074407C00438DBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC32936C2074407C00438DBF /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC10FB05207466FB0035055B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		AC10FB072074762B0035055B /* CreateAccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountController.swift; sourceTree = "<group>"; };
 		AC3293622074407A00438DBF /* yak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3293652074407A00438DBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC32936A2074407A00438DBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 			children = (
 				AC32937F2074472B00438DBF /* ChatController.swift */,
 				AC3293812074474400438DBF /* ChannelController.swift */,
+				AC10FB05207466FB0035055B /* LoginController.swift */,
+				AC10FB072074762B0035055B /* CreateAccountController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -284,7 +290,9 @@
 				AC32938420744E8200438DBF /* GradientView.swift in Sources */,
 				AC3293802074472B00438DBF /* ChatController.swift in Sources */,
 				AC3293822074474400438DBF /* ChannelController.swift in Sources */,
+				AC10FB082074762B0035055B /* CreateAccountController.swift in Sources */,
 				AC3293872074601F00438DBF /* Constants.swift in Sources */,
+				AC10FB06207466FB0035055B /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
