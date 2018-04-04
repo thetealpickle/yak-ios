@@ -23,6 +23,7 @@
 		AC32938420744E8200438DBF /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC32938320744E8200438DBF /* GradientView.swift */; };
 		AC3293872074601F00438DBF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3293862074601F00438DBF /* Constants.swift */; };
 		ACD4148D207528B5001BBA37 /* AvatarPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD4148C207528B5001BBA37 /* AvatarPickerController.swift */; };
+		ACD4148F20753DE0001BBA37 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD4148E20753DE0001BBA37 /* AvatarCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		AC32938320744E8200438DBF /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		AC3293862074601F00438DBF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ACD4148C207528B5001BBA37 /* AvatarPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerController.swift; sourceTree = "<group>"; };
+		ACD4148E20753DE0001BBA37 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		C23AEACCF52F167C3BE3C977 /* Pods-yak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yak.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yak/Pods-yak.debug.xcconfig"; sourceTree = "<group>"; };
 		F483C96B6E50F46106810E1F /* Pods_yak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA141623E667A552EBF38188 /* Pods-yak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yak.release.xcconfig"; path = "Pods/Target Support Files/Pods-yak/Pods-yak.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			children = (
 				AC32938320744E8200438DBF /* GradientView.swift */,
 				AC10FB0C20750B7C0035055B /* RoundedButton.swift */,
+				ACD4148E20753DE0001BBA37 /* AvatarCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				AC10FB0B207503420035055B /* AuthService.swift in Sources */,
 				AC3293802074472B00438DBF /* ChatController.swift in Sources */,
 				AC3293822074474400438DBF /* ChannelController.swift in Sources */,
+				ACD4148F20753DE0001BBA37 /* AvatarCell.swift in Sources */,
 				AC10FB082074762B0035055B /* CreateAccountController.swift in Sources */,
 				AC3293872074601F00438DBF /* Constants.swift in Sources */,
 				AC10FB06207466FB0035055B /* LoginController.swift in Sources */,

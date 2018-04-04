@@ -535,10 +535,10 @@
             </objects>
             <point key="canvasLocation" x="2197.5999999999999" y="-174.06296851574214"/>
         </scene>
-        <!--View Controller-->
+        <!--Avatar Picker Controller-->
         <scene sceneID="0NL-Gn-Wx2">
             <objects>
-                <viewController id="gbf-Ne-3dy" sceneMemberID="viewController">
+                <viewController id="gbf-Ne-3dy" customClass="AvatarPickerController" customModule="yak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sEP-kn-lBW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -546,6 +546,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psf-Qk-sJE">
                                 <rect key="frame" x="20" y="28" width="28" height="28"/>
                                 <state key="normal" image="yakBack"/>
+                                <connections>
+                                    <action selector="backPressed:" destination="gbf-Ne-3dy" eventType="touchUpInside" id="HdB-Ia-ctG"/>
+                                    <action selector="backPressed:" destination="yxF-1M-qFI" eventType="touchUpInside" id="wOM-ef-fgA"/>
+                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="u7L-1Y-kBt">
                                 <rect key="frame" x="107.5" y="28" width="160" height="29"/>
@@ -557,6 +561,9 @@
                                     <segment title="Light"/>
                                 </segments>
                                 <color key="tintColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segmentControlChanged:" destination="gbf-Ne-3dy" eventType="valueChanged" id="KV3-rG-SLf"/>
+                                </connections>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AmR-yu-gjm">
                                 <rect key="frame" x="0.0" y="76" width="375" height="591"/>
@@ -568,7 +575,7 @@
                                     <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="JLy-DW-uJF">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="avatarCell" id="JLy-DW-uJF" customClass="AvatarCell" customModule="yak" customModuleProvider="target">
                                         <rect key="frame" x="20" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -586,6 +593,9 @@
                                             <constraint firstItem="LXm-3v-QOJ" firstAttribute="top" secondItem="JLy-DW-uJF" secondAttribute="topMargin" constant="10" id="gYS-tr-Enz"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="LXm-3v-QOJ" secondAttribute="trailing" constant="10" id="rhy-Gz-xpj"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="avatarImageView" destination="LXm-3v-QOJ" id="Lv6-JW-U5H"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -603,8 +613,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sWb-bk-EIi"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="AmR-yu-gjm" id="U0x-c9-Ulf"/>
+                        <outlet property="segmentControl" destination="u7L-1Y-kBt" id="5Hz-RX-ana"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fD9-IK-yOI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="yxF-1M-qFI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3021.5999999999999" y="-174.06296851574214"/>
         </scene>
