@@ -89,7 +89,7 @@
 				AC3293852074600200438DBF /* Utilities */,
 				AC32937E2074470F00438DBF /* Models */,
 				AC32937D2074470800438DBF /* Views */,
-				AC32937C207446F500438DBF /* controller */,
+				AC32937C207446F500438DBF /* Controllers */,
 				AC3293772074448400438DBF /* Supporting Files */,
 				AC3293652074407A00438DBF /* AppDelegate.swift */,
 				AC3293692074407A00438DBF /* Main.storyboard */,
@@ -110,7 +110,7 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AC32937C207446F500438DBF /* controller */ = {
+		AC32937C207446F500438DBF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				AC32937F2074472B00438DBF /* ChatController.swift */,
@@ -118,7 +118,7 @@
 				AC10FB05207466FB0035055B /* LoginController.swift */,
 				AC10FB072074762B0035055B /* CreateAccountController.swift */,
 			);
-			path = controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		AC32937D2074470800438DBF /* Views */ = {
