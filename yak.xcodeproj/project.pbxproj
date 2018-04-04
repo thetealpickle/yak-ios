@@ -16,6 +16,7 @@
 		AC3293802074472B00438DBF /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC32937F2074472B00438DBF /* ChatController.swift */; };
 		AC3293822074474400438DBF /* ChannelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3293812074474400438DBF /* ChannelController.swift */; };
 		AC32938420744E8200438DBF /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC32938320744E8200438DBF /* GradientView.swift */; };
+		AC3293872074601F00438DBF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3293862074601F00438DBF /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		AC32937F2074472B00438DBF /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		AC3293812074474400438DBF /* ChannelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelController.swift; sourceTree = "<group>"; };
 		AC32938320744E8200438DBF /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		AC3293862074601F00438DBF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C23AEACCF52F167C3BE3C977 /* Pods-yak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yak.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yak/Pods-yak.debug.xcconfig"; sourceTree = "<group>"; };
 		F483C96B6E50F46106810E1F /* Pods_yak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA141623E667A552EBF38188 /* Pods-yak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yak.release.xcconfig"; path = "Pods/Target Support Files/Pods-yak/Pods-yak.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 		AC3293642074407A00438DBF /* yak */ = {
 			isa = PBXGroup;
 			children = (
+				AC3293852074600200438DBF /* Utilities */,
 				AC32937E2074470F00438DBF /* models */,
 				AC32937D2074470800438DBF /* view */,
 				AC32937C207446F500438DBF /* controller */,
@@ -114,6 +117,14 @@
 			children = (
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		AC3293852074600200438DBF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AC3293862074601F00438DBF /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		B5F40759FA5CF671D8DD32B2 /* Frameworks */ = {
@@ -273,6 +284,7 @@
 				AC32938420744E8200438DBF /* GradientView.swift in Sources */,
 				AC3293802074472B00438DBF /* ChatController.swift in Sources */,
 				AC3293822074474400438DBF /* ChannelController.swift in Sources */,
+				AC3293872074601F00438DBF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
