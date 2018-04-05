@@ -37,11 +37,25 @@ class ChatController: UIViewController {
             channelNameLabel.text = "Please Log in"
         }
     }
+    
+    func getMessages() {
+        guard let channelId = MessageService.instance.selectedChannel?.id else { return }
+        MessageService.instance.findAllMessagesforChannel(channelId: channelId) { (success) in
+            if success {
+                
+            }
+        }
+    }
 
     func onLoginGetMessages() {
         MessageService.instance.findAllChannels { (success) in
             if success {
-                // do stuff with channels
+                if MessageService.instance.channels.count > 0 {
+                    MessageService.instance.selectedChannel = MessageService.instance.channels[0]
+                    self.updateWithChannel()
+                } else {
+                    self.channelNameLabel.text = "No channels yet!"
+                }
             }
         }
     }
@@ -49,5 +63,6 @@ class ChatController: UIViewController {
     func updateWithChannel() {
         let channelName = MessageService.instance.selectedChannel?.channelTitle ?? ""
         channelNameLabel.text = "#\(channelName)"
+        getMessages()
     }
 }

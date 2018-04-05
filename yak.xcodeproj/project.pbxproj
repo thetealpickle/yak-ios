@@ -19,6 +19,7 @@
 		AC1B3ACB2076CFB6005EE664 /* AddChannelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1B3AC92076CFB6005EE664 /* AddChannelController.swift */; };
 		AC1B3ACC2076CFB6005EE664 /* AddChannelController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC1B3ACA2076CFB6005EE664 /* AddChannelController.xib */; };
 		AC1B3ACE2076D6D1005EE664 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1B3ACD2076D6D1005EE664 /* SocketService.swift */; };
+		AC1B3AD02076E925005EE664 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1B3ACF2076E925005EE664 /* Message.swift */; };
 		AC3293662074407A00438DBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3293652074407A00438DBF /* AppDelegate.swift */; };
 		AC32936B2074407A00438DBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC3293692074407A00438DBF /* Main.storyboard */; };
 		AC32936D2074407C00438DBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC32936C2074407C00438DBF /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		AC1B3AC92076CFB6005EE664 /* AddChannelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelController.swift; sourceTree = "<group>"; };
 		AC1B3ACA2076CFB6005EE664 /* AddChannelController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelController.xib; sourceTree = "<group>"; };
 		AC1B3ACD2076D6D1005EE664 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
+		AC1B3ACF2076E925005EE664 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		AC3293622074407A00438DBF /* yak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3293652074407A00438DBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC32936A2074407A00438DBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				AC1B3AC52076C098005EE664 /* Channel.swift */,
+				AC1B3ACF2076E925005EE664 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				AC1B3AC82076C740005EE664 /* ChannelCell.swift in Sources */,
 				AC3293662074407A00438DBF /* AppDelegate.swift in Sources */,
 				AC10FB0D20750B7C0035055B /* RoundedButton.swift in Sources */,
+				AC1B3AD02076E925005EE664 /* Message.swift in Sources */,
 				AC7B54592075543E0089942F /* CircleImage.swift in Sources */,
 				AC1B3AC62076C098005EE664 /* Channel.swift in Sources */,
 				AC32937B207444C800438DBF /* SWRevealViewController.m in Sources */,

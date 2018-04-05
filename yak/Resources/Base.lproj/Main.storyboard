@@ -41,10 +41,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mrO-MN-mZx" customClass="GradientView" customModule="yak" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yak" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXO-yk-dn8">
-                                        <rect key="frame" x="163" y="45.5" width="50" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yak" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXO-yk-dn8">
+                                        <rect key="frame" x="87.5" y="46" width="200" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="Iil-BF-n3Y"/>
+                                            <constraint firstAttribute="width" constant="200" id="Iil-BF-n3Y"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -92,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5CG-2Y-cc7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="682.60869565217399" y="537.22826086956525"/>
+            <point key="canvasLocation" x="682.39999999999998" y="536.58170914542734"/>
         </scene>
         <!--Channel Controller-->
         <scene sceneID="fCh-9m-0Jf">
