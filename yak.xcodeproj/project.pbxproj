@@ -13,6 +13,9 @@
 		AC10FB0B207503420035055B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10FB0A207503420035055B /* AuthService.swift */; };
 		AC10FB0D20750B7C0035055B /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10FB0C20750B7C0035055B /* RoundedButton.swift */; };
 		AC10FB0F207515130035055B /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10FB0E207515130035055B /* UserDataService.swift */; };
+		AC1B3AC42076C068005EE664 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1B3AC32076C068005EE664 /* MessageService.swift */; };
+		AC1B3AC62076C098005EE664 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1B3AC52076C098005EE664 /* Channel.swift */; };
+		AC1B3AC82076C740005EE664 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1B3AC72076C740005EE664 /* ChannelCell.swift */; };
 		AC3293662074407A00438DBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3293652074407A00438DBF /* AppDelegate.swift */; };
 		AC32936B2074407A00438DBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC3293692074407A00438DBF /* Main.storyboard */; };
 		AC32936D2074407C00438DBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC32936C2074407C00438DBF /* Assets.xcassets */; };
@@ -35,6 +38,9 @@
 		AC10FB0A207503420035055B /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		AC10FB0C20750B7C0035055B /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		AC10FB0E207515130035055B /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
+		AC1B3AC32076C068005EE664 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
+		AC1B3AC52076C098005EE664 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		AC1B3AC72076C740005EE664 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		AC3293622074407A00438DBF /* yak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3293652074407A00438DBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC32936A2074407A00438DBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +81,7 @@
 			children = (
 				AC10FB0A207503420035055B /* AuthService.swift */,
 				AC10FB0E207515130035055B /* UserDataService.swift */,
+				AC1B3AC32076C068005EE664 /* MessageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -144,6 +151,7 @@
 				AC10FB0C20750B7C0035055B /* RoundedButton.swift */,
 				ACD4148E20753DE0001BBA37 /* AvatarCell.swift */,
 				AC7B54582075543E0089942F /* CircleImage.swift */,
+				AC1B3AC72076C740005EE664 /* ChannelCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,6 +159,7 @@
 		AC32937E2074470F00438DBF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AC1B3AC52076C098005EE664 /* Channel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -335,10 +344,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACD4148D207528B5001BBA37 /* AvatarPickerController.swift in Sources */,
+				AC1B3AC82076C740005EE664 /* ChannelCell.swift in Sources */,
 				AC3293662074407A00438DBF /* AppDelegate.swift in Sources */,
 				AC10FB0D20750B7C0035055B /* RoundedButton.swift in Sources */,
 				AC7B54592075543E0089942F /* CircleImage.swift in Sources */,
+				AC1B3AC62076C098005EE664 /* Channel.swift in Sources */,
 				AC32937B207444C800438DBF /* SWRevealViewController.m in Sources */,
+				AC1B3AC42076C068005EE664 /* MessageService.swift in Sources */,
 				AC7B545C207649B30089942F /* ProfileController.swift in Sources */,
 				AC10FB0F207515130035055B /* UserDataService.swift in Sources */,
 				AC32938420744E8200438DBF /* GradientView.swift in Sources */,
