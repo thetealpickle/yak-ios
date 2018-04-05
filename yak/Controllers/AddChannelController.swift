@@ -1,10 +1,5 @@
-//
-//  AddChannelController.swift
-//  yak
-//
 //  Created by Jessica Joseph on 4/5/18.
 //  Copyright © 2018 TFH Inc. All rights reserved.
-//
 
 import UIKit
 
@@ -37,5 +32,14 @@ class AddChannelController: UIViewController {
     }
     
     @IBAction func createChannelPressed(_ sender: Any) {
+        guard let channelName = nameTextField.text , nameTextField.text != "" else { return }
+        guard let channelDesc = descriptionTextField.text else { return }
+        
+        SocketService.instance.addChannel(channelName: channelName, channelDescription: channelDesc) { (success) in
+            if success {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
+        
     }
 }
