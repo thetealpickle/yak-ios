@@ -126,6 +126,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qE9-wI-HJx">
                                 <rect key="frame" x="281" y="86" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
+                                <connections>
+                                    <action selector="addChannelPressed:" destination="Nvc-mw-VXC" eventType="touchUpInside" id="4Qz-cR-lCb"/>
+                                    <action selector="loginButtonPressed:" destination="Nvc-mw-VXC" eventType="touchUpInside" id="zaD-EW-XWb"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="LIV-NK-END" customClass="CircleImage" customModule="yak" customModuleProvider="target">
                                 <rect key="frame" x="20" y="572" width="75" height="75"/>
