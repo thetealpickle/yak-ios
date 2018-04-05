@@ -71,6 +71,7 @@ class CreateAccountController: UIViewController {
                 AuthService.instance.loginUser(email: email, password: password, completion: { (success) in
                     if success {
                         print("user logged in")
+                        print(self.avatarColor)
                         AuthService.instance.createUser(name: name, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
                             if success {
                                 self.spinner.isHidden = true
@@ -99,6 +100,7 @@ class CreateAccountController: UIViewController {
         
         bgColor = UIColor(red: r, green: g, blue: b, alpha: 1)
         avatarColor = "[\(r), \(g), \(b)]"
+        print(avatarColor)
         UIView.animate(withDuration: 0.2) {
             self.userImageView.backgroundColor = self.bgColor
         }
