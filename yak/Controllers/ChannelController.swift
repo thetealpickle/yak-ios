@@ -16,6 +16,7 @@ class ChannelController: UIViewController {
 
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
         NotificationCenter.default.addObserver(self, selector: #selector(userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(channelsLoaded), name: NOTIF_CHANNELS_LOADED, object: nil)
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -29,6 +30,10 @@ class ChannelController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         setupUserInfo()
+    }
+    
+    @objc func channelsLoaded() {
+        tableView.reloadData()
     }
     
     @objc func userDataDidChange(_ notif: Notification) {
@@ -45,6 +50,7 @@ class ChannelController: UIViewController {
             loginButton.setTitle("Login", for: .normal)
             userImageView.image = UIImage(named: "menuProfileIcon")
             userImageView.backgroundColor = UIColor.clear
+            tableView.reloadData()
         }
     }
     

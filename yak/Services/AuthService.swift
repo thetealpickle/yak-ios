@@ -80,12 +80,12 @@ class AuthService {
                 
                     self.userEmail = email
                     self.authToken = token
-                    
-                self.isLoggedIn = true
-                completion(true)
                 } catch {
                     debugPrint("[JSON ERROR] Error handling JSON]")
                 }
+                
+                self.isLoggedIn = true
+                completion(true)
             } else {
                 completion(false)
                 debugPrint(response.result.error as Any)
