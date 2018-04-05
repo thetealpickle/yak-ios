@@ -65,7 +65,7 @@ extension AvatarPickerController: UICollectionViewDelegate, UICollectionViewDele
         if avatarType == .dark {
             UserDataService.instance.setAvatarName(avatarName: "dark\(indexPath.item)")
         } else {
-            UserDataService.instance.setAvatarName(avatarName: "dark\(indexPath.item)")
+            UserDataService.instance.setAvatarName(avatarName: "light\(indexPath.item)")
         }
         
         self.dismiss(animated: true, completion: nil)

@@ -22,6 +22,7 @@
 		AC3293822074474400438DBF /* ChannelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3293812074474400438DBF /* ChannelController.swift */; };
 		AC32938420744E8200438DBF /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC32938320744E8200438DBF /* GradientView.swift */; };
 		AC3293872074601F00438DBF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3293862074601F00438DBF /* Constants.swift */; };
+		AC7B54592075543E0089942F /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B54582075543E0089942F /* CircleImage.swift */; };
 		ACD4148D207528B5001BBA37 /* AvatarPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD4148C207528B5001BBA37 /* AvatarPickerController.swift */; };
 		ACD4148F20753DE0001BBA37 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD4148E20753DE0001BBA37 /* AvatarCell.swift */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,7 @@
 		AC3293812074474400438DBF /* ChannelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelController.swift; sourceTree = "<group>"; };
 		AC32938320744E8200438DBF /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		AC3293862074601F00438DBF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AC7B54582075543E0089942F /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		ACD4148C207528B5001BBA37 /* AvatarPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerController.swift; sourceTree = "<group>"; };
 		ACD4148E20753DE0001BBA37 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		C23AEACCF52F167C3BE3C977 /* Pods-yak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yak.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yak/Pods-yak.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				AC32938320744E8200438DBF /* GradientView.swift */,
 				AC10FB0C20750B7C0035055B /* RoundedButton.swift */,
 				ACD4148E20753DE0001BBA37 /* AvatarCell.swift */,
+				AC7B54582075543E0089942F /* CircleImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				ACD4148D207528B5001BBA37 /* AvatarPickerController.swift in Sources */,
 				AC3293662074407A00438DBF /* AppDelegate.swift in Sources */,
 				AC10FB0D20750B7C0035055B /* RoundedButton.swift in Sources */,
+				AC7B54592075543E0089942F /* CircleImage.swift in Sources */,
 				AC32937B207444C800438DBF /* SWRevealViewController.m in Sources */,
 				AC10FB0F207515130035055B /* UserDataService.swift in Sources */,
 				AC32938420744E8200438DBF /* GradientView.swift in Sources */,

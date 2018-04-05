@@ -78,6 +78,9 @@ class AuthService {
                     let email = json["user"].stringValue
                     let token = json["token"].stringValue
                 
+                    self.userEmail = email
+                    self.authToken = token
+                    
                 self.isLoggedIn = true
                 completion(true)
                 } catch {
