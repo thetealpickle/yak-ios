@@ -9,6 +9,7 @@ class ChatController: UIViewController {
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var channelNameLabel: UILabel!
     @IBOutlet weak var inputTextField: UITextField!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,11 @@ class ChatController: UIViewController {
                 NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
             }
         }
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.estimatedRowHeight = 80
+        tableView.rowHeight = UITableViewAutomaticDimension   
     }
     
     @objc func channelSelected(_ notif: Notification) {
@@ -51,7 +57,7 @@ class ChatController: UIViewController {
         guard let channelId = MessageService.instance.selectedChannel?.id else { return }
         MessageService.instance.findAllMessagesforChannel(channelId: channelId) { (success) in
             if success {
-                
+                self.tableView.reloadData()
             }
         }
     }
@@ -76,6 +82,36 @@ class ChatController: UIViewController {
     }
     
     @IBAction func sendMessagePressed(_ sender: Any) {
-        
+        if AuthService.instance.isLoggedIn {
+            guard let channelId = MessageService.instance.selectedChannel?.id else { return }
+            guard let message = inputTextField.text else { return }
+            
+            SocketService.instance.addMessage(messageBody: message, userId: UserDataService.instance.id, channelId: channelId) { (success) in
+                if success {
+                    self.inputTextField.text = ""
+                    self.inputTextField.resignFirstResponder()
+                }
+            }
+        }
+    }
+}
+
+extension ChatController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as? MessageCell {
+            let message = MessageService.instance.messages[indexPath.row]
+            cell.configureCell(message: message)
+            return cell
+        } else {
+            return UITableViewCell()
+        }
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return MessageService.instance.messages.count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
 }
