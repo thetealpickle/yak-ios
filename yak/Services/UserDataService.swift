@@ -41,9 +41,8 @@ class UserDataService {
         guard let rUnwrapped = r else { return defaultColor }
         guard let gUnwrapped = g else { return defaultColor }
         guard let bUnwrapped = b else { return defaultColor }
-        guard let aUnwrapped = a else { return defaultColor }
-
-        return UIColor(red: CGFloat(rUnwrapped.doubleValue), green: CGFloat(gUnwrapped.doubleValue), blue: CGFloat(bUnwrapped.doubleValue), alpha: CGFloat(aUnwrapped.doubleValue))
+        
+        return UIColor(red: CGFloat(rUnwrapped.doubleValue), green: CGFloat(gUnwrapped.doubleValue), blue: CGFloat(bUnwrapped.doubleValue), alpha: 1)
     }
     
     func logoutUser() {
