@@ -8,10 +8,15 @@ class ChatController: UIViewController {
     // Outlets
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var channelNameLabel: UILabel!
+    @IBOutlet weak var inputTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.bindToKeyboard()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        view.addGestureRecognizer(tap)
+        
         menuButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
@@ -28,6 +33,10 @@ class ChatController: UIViewController {
     
     @objc func channelSelected(_ notif: Notification) {
         updateWithChannel()
+    }
+    
+    @objc func handleTap() {
+        view.endEditing(true)
     }
     
     @objc func userDataDidChange(_ notif: Notification) {
@@ -64,5 +73,9 @@ class ChatController: UIViewController {
         let channelName = MessageService.instance.selectedChannel?.channelTitle ?? ""
         channelNameLabel.text = "#\(channelName)"
         getMessages()
+    }
+    
+    @IBAction func sendMessagePressed(_ sender: Any) {
+        
     }
 }

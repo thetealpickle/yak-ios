@@ -23,8 +23,16 @@ class SocketService: NSObject {
     }
     
     func addChannel(channelName: String, channelDescription: String, completion:@escaping CompletionHandler) {
-            if AuthService.instance.isLoggedIn{
+            if AuthService.instance.isLoggedIn {
             socket.emit("newChannel", channelName, channelDescription)
+            completion(true)
+        }
+    }
+    
+    func addMessage(messageBody: String, userId: String, channelId: String, completion:@escaping CompletionHandler) {
+        if AuthService.instance.isLoggedIn {
+            let user = UserDataService.instance
+            socket.emit("newMessage", messageBody, userId, channelId, user.name, user.avatarName, user.avatarColor)
             completion(true)
         }
     }

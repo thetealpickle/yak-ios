@@ -76,17 +76,39 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6hc-8k-DI0">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Jrb-Gb-i6k"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZf-l4-GFN">
+                                <rect key="frame" x="337" y="632" width="30" height="30"/>
+                                <state key="normal" image="send"/>
+                                <connections>
+                                    <action selector="sendMessagePressed:" destination="EKX-yb-TYw" eventType="touchUpInside" id="h0p-0p-o4x"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="EZf-l4-GFN" firstAttribute="centerY" secondItem="6hc-8k-DI0" secondAttribute="centerY" id="5ne-PN-PPm"/>
+                            <constraint firstItem="NCt-CA-giJ" firstAttribute="trailing" secondItem="EZf-l4-GFN" secondAttribute="trailing" constant="8" id="F9y-Ex-ZsY"/>
                             <constraint firstItem="mrO-MN-mZx" firstAttribute="trailing" secondItem="NCt-CA-giJ" secondAttribute="trailing" id="Lz4-fb-Yu3"/>
                             <constraint firstItem="mrO-MN-mZx" firstAttribute="leading" secondItem="NCt-CA-giJ" secondAttribute="leading" id="Ola-S0-g4B"/>
+                            <constraint firstItem="NCt-CA-giJ" firstAttribute="trailing" secondItem="6hc-8k-DI0" secondAttribute="trailing" id="Qht-MF-wKY"/>
+                            <constraint firstItem="6hc-8k-DI0" firstAttribute="leading" secondItem="NCt-CA-giJ" secondAttribute="leading" id="SyP-62-kjg"/>
+                            <constraint firstItem="NCt-CA-giJ" firstAttribute="bottom" secondItem="6hc-8k-DI0" secondAttribute="bottom" id="gGO-Gp-KEX"/>
                             <constraint firstItem="mrO-MN-mZx" firstAttribute="top" secondItem="v7O-iL-s6C" secondAttribute="top" id="grP-sP-rJs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NCt-CA-giJ"/>
                     </view>
                     <connections>
                         <outlet property="channelNameLabel" destination="RXO-yk-dn8" id="7tP-vI-SLA"/>
+                        <outlet property="inputTextField" destination="6hc-8k-DI0" id="opQ-Jc-LVk"/>
                         <outlet property="menuButton" destination="SLD-8x-oQS" id="WLO-rR-MqM"/>
                     </connections>
                 </viewController>
@@ -659,6 +681,7 @@
         <image name="closeButton" width="28" height="28"/>
         <image name="menuProfileIcon" width="99" height="99"/>
         <image name="profileDefault" width="192" height="192"/>
+        <image name="send" width="30" height="30"/>
         <image name="yakBack" width="28" height="28"/>
         <image name="yakBurger" width="40" height="40"/>
         <image name="yakLogo" width="48" height="40"/>
