@@ -10,11 +10,16 @@ class ChatController: UIViewController {
     @IBOutlet weak var channelNameLabel: UILabel!
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var sendButton: UIButton!
+    
+    // Variables
+    var isTyping = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.bindToKeyboard()
+        sendButton.isHidden = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         view.addGestureRecognizer(tap)
         
@@ -29,7 +34,7 @@ class ChatController: UIViewController {
             if success {
                 self.tableView.reloadData()
                 if MessageService.instance.messages.count > 0 {
-                    let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 1)
+                    let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
                     self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
                 }
             }
@@ -60,6 +65,7 @@ class ChatController: UIViewController {
             onLoginGetMessages()
         } else {
             channelNameLabel.text = "Please Log in"
+            tableView.reloadData()
         }
     }
     
@@ -102,6 +108,19 @@ class ChatController: UIViewController {
                     self.inputTextField.resignFirstResponder()
                 }
             }
+        }
+    }
+
+    @IBAction func messageBoxEditing(_ sender: Any) {
+        if inputTextField.text == "" {
+            isTyping = false
+            sendButton.isHidden = true
+        } else {
+            if isTyping == false {
+                sendButton.isHidden = false
+            }
+            
+            isTyping = true
         }
     }
 }
