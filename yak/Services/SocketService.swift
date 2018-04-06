@@ -30,11 +30,9 @@ class SocketService: NSObject {
     }
     
     func addMessage(messageBody: String, userId: String, channelId: String, completion:@escaping CompletionHandler) {
-        if AuthService.instance.isLoggedIn {
             let user = UserDataService.instance
             socket.emit("newMessage", messageBody, userId, channelId, user.name, user.avatarName, user.avatarColor)
             completion(true)
-        }
     }
     
     func getChannel(completion:@escaping CompletionHandler) {
@@ -46,6 +44,27 @@ class SocketService: NSObject {
             let newChannel = Channel(channelTitle: channelName, channelDescription: channelDesc, id: channelId)
             MessageService.instance.channels.append(newChannel)
             completion(true)
+        }
+    }
+    
+    func getMessage(completion:@escaping CompletionHandler) {
+        socket.on("messageCreated") { (dataArr, ack) in
+            guard let messageBody = dataArr[0] as? String else { return }
+            guard let channelId = dataArr[2] as? String else { return }
+            guard let username = dataArr[3] as? String else { return }
+            guard let userAvatar = dataArr[4] as? String else { return }
+            guard let userAvatarColor = dataArr[5] as? String else { return }
+            guard let messageId = dataArr[6] as? String else { return }
+            guard let timeStamp = dataArr[7] as? String else { return }
+
+            if channelId == MessageService.instance.selectedChannel?.id && AuthService.instance.isLoggedIn {
+                let newMessage = Message(id: messageId, message: messageBody, username: username, userAvatar: userAvatar, userAvatarColor: userAvatarColor, timeStamp: timeStamp, channelId: channelId)
+                
+                MessageService.instance.messages.append(newMessage)
+                completion(true)
+            } else {
+                completion(false)
+            }
         }
     }
 }
