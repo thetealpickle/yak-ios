@@ -48,7 +48,7 @@ class CreateAccountController: UIViewController {
     }
     
     @IBAction func closePressed(_ sender: Any) {
-        performSegue(withIdentifier: UNWIND, sender: nil)
+        performSegue(withIdentifier: "unwindLogin", sender: nil)
     }
     @IBAction func createAccountPressed(_ sender: Any) {
         spinner.isHidden = false

@@ -2,6 +2,7 @@
 //  Copyright © 2018 TFH Inc. All rights reserved. c
 
 import UIKit
+import UserNotifications
 
 class ChannelController: UIViewController {
 
@@ -26,6 +27,7 @@ class ChannelController: UIViewController {
                 self.tableView.reloadData()
             }
         }
+        
         SocketService.instance.getMessage { (newMessage) in
             if newMessage.channelId != MessageService.instance.selectedChannel?.id && AuthService.instance.isLoggedIn {
                 MessageService.instance.unreadChannels.append(newMessage.channelId)

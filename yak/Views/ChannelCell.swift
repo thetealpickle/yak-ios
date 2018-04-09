@@ -2,6 +2,7 @@
 //  Copyright © 2018 TFH Inc. All rights reserved.
 
 import UIKit
+import UserNotifications
 
 class ChannelCell: UITableViewCell {
     
@@ -30,6 +31,7 @@ class ChannelCell: UITableViewCell {
         for id in MessageService.instance.unreadChannels {
             if id == channel.id {
                 channelLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 22)
+    
             }
         }
     }

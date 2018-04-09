@@ -80,7 +80,7 @@ class ChatController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 80
-        tableView.rowHeight = UITableViewAutomaticDimension   
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     @objc func channelSelected(_ notif: Notification) {

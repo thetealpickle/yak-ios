@@ -31,7 +31,7 @@ class ProfileController: UIViewController {
         let closeTouch = UITapGestureRecognizer(target: self, action: #selector(closeTap))
         self.bgView.addGestureRecognizer(closeTouch)
         
-        self.profileBackgroundView.layer.cornerRadius = 15
+        self.profileBackgroundView.layer.cornerRadius = 25
     }
     
     @IBAction func closeModalPressed(_ sender: Any) {
@@ -41,8 +41,9 @@ class ProfileController: UIViewController {
     @IBAction func logoutPressed(_ sender: Any) {
         UserDataService.instance.logoutUser()
         NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE , object: nil)
-        self.dismiss(animated: true, completion: nil)
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "login")
+        present(controller, animated: true, completion: nil)
     }
     
 }
