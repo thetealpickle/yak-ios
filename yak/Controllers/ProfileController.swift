@@ -10,6 +10,7 @@ class ProfileController: UIViewController {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var userEmailLabel: UILabel!
     @IBOutlet weak var bgView: UIView!
+    @IBOutlet weak var profileBackgroundView: UIView!
     
     
     override func viewDidLoad() {
@@ -29,6 +30,8 @@ class ProfileController: UIViewController {
         
         let closeTouch = UITapGestureRecognizer(target: self, action: #selector(closeTap))
         self.bgView.addGestureRecognizer(closeTouch)
+        
+        self.profileBackgroundView.layer.cornerRadius = 15
     }
     
     @IBAction func closeModalPressed(_ sender: Any) {
