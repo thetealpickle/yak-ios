@@ -1,12 +1,8 @@
-//
-//  AppDelegate.swift
-//  yak
-//
 //  Created by Jessica Joseph on 4/3/18.
 //  Copyright © 2018 TFH Inc. All rights reserved.
-//
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let controller = storyboard.instantiateViewController(withIdentifier: "login")
             window?.makeKeyAndVisible()
             window?.rootViewController?.present(controller, animated: true, completion: nil)
+        }
+        
+        // register for push notifications
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
+            print("Permission granted: \(granted)")
         }
         return true
     }
